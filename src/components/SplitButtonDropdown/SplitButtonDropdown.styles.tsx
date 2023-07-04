@@ -17,7 +17,8 @@ export const Styled = {
   SendGiftsButton: styled(BaseButton)`
     border-radius: 100px 0 0 100px;
     width: 103px;
-    transition: border-radius 0.5s ease-in-out, width 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out,
+      border-radius 0.5s ease-in-out, width 0.3s ease-in-out;
 
     &.full-width {
       border-radius: 100px;
