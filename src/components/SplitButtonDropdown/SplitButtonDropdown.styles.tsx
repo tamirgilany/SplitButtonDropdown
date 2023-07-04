@@ -1,3 +1,4 @@
+import { Tabs } from "antd";
 import { styled } from "styled-components";
 import { Button } from "../Button";
 
@@ -43,5 +44,34 @@ export const Styled = {
   `,
   DropdownContentWrapper: styled("div")`
     min-width: 240px;
+  `,
+  Tabs: styled(Tabs)`
+    && {
+      .ant-tabs-tab-active {
+        .ant-tabs-tab-btn {
+          color: #345276;
+          font-weight: 500;
+        }
+      }
+
+      .ant-tabs-ink-bar {
+        &.ant-tabs-ink-bar-animated {
+          background: #3077c9;
+        }
+      }
+    }
+
+    .ant-tabs-tab-btn {
+      color: #5a7390;
+      font-size: 14px;
+      font-family: "DM Sans";
+
+      &:hover {
+        color: #3077c9;
+      }
+    }
+  `,
+  TabLabel: styled("div")`
+    min-width: 134px;
   `,
 };
