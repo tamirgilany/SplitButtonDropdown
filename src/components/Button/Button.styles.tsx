@@ -17,6 +17,10 @@ export const Styled = {
 
     &:hover {
       cursor: pointer;
+      background-color: #2864a8;
+    }
+
+    &:focus {
       background-color: #205086;
     }
   `,

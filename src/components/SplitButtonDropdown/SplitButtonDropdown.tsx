@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { Tabs } from "antd";
 import type { TabsProps } from "antd";
 import { ChevronDown, ChevronUp } from "react-feather";
 import { Styled } from "./SplitButtonDropdown.styles";
 import clsx from "clsx";
 import { DropdownContentLayout } from "./components/DropdownContentLayout";
 import { useOutsideClick } from "../../hooks";
+import { CreateNew, ExistingCampaigns } from "./components/Tabs";
 
 interface SplitButtonDropdownProps {
   showDropdown: boolean;
@@ -18,13 +18,13 @@ const onChange = (key: string) => {
 const items: TabsProps["items"] = [
   {
     key: "1",
-    label: `Create New`,
-    children: `Content of Tab Pane 1`,
+    label: <Styled.TabLabel>Create New</Styled.TabLabel>,
+    children: <CreateNew />,
   },
   {
     key: "2",
-    label: `Existing Campaigns`,
-    children: `Content of Tab Pane 2`,
+    label: <Styled.TabLabel>Existing Campaigns</Styled.TabLabel>,
+    children: <ExistingCampaigns />,
   },
 ];
 
@@ -60,7 +60,7 @@ export const SplitButtonDropdown: React.FC<SplitButtonDropdownProps> = ({
 
       <DropdownContentLayout visible={isOpen}>
         <Styled.DropdownContentWrapper>
-          <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
+          <Styled.Tabs defaultActiveKey="1" items={items} onChange={onChange} />
         </Styled.DropdownContentWrapper>
       </DropdownContentLayout>
     </Styled.Layout>
