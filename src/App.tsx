@@ -13,7 +13,7 @@ function App() {
             setShowDD(!showDD);
           }}
         >
-          click
+          Toggle between split button and normal button
         </button>
         <SplitButtonDropdown showDropdown={showDD} />
       </header>
